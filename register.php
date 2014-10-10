@@ -1,6 +1,21 @@
 <?php
- if (condition) {
- 	# code...
+ if (isset($_POST['username'], $_POST['password'], $_POST['re_password'], 
+     $_POST['firstname'], $_POST['lastname'], $_POST['email'])) {
+ 	$username = $_POST['username'];
+     $password = $_POST['password'];
+     $re_password = $_POST['re_password'];
+     $firstname = $_POST['firstname'];
+     $lastname = $_POST['lastname'];
+     $email = $_POST['email'];
+
+
+       if (!empty($username) && !empty($password) && !empty($re_password) && !empty($firstname) && !empty($lastname) && !empty($email) ) {
+            echo "ok";
+       } else {
+            echo "All fields are required.";
+       }
+       
+
  }
 
 
